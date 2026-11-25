@@ -1,1 +1,115 @@
-<!-- Game files will be added here -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#0b7892">
+  <title>ตกปลามหาสนุก by Keji</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="brand">🎣 ตกปลามหาสนุก <small>by Keji</small></div>
+      <div class="sub">LIVE FISHING PARTY</div>
+    </div>
+    <div id="live" class="live">● กำลังเชื่อมต่อเกม</div>
+  </header>
+
+  <main>
+    <section class="pond-wrap">
+      <div class="pond-head">
+        <div>
+          <b>🌴 บ่อตกปลามหาสนุก</b>
+          <span id="player-count">0 นักตกปลา</span>
+        </div>
+        <div class="pond-legend">🐟 ปลาแหวกว่าย · 🎣 ตกปลา</div>
+      </div>
+
+      <div class="scene">
+        <div class="sun"></div>
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+        <div class="hill left"></div>
+        <div class="hill right"></div>
+
+        <div class="water">
+          <div class="ripple r1"></div>
+          <div class="ripple r2"></div>
+          <div class="ripple r3"></div>
+          <span class="swim s1">🐟</span>
+          <span class="swim s2">🐠</span>
+          <span class="swim s3">🐡</span>
+          <span class="swim s4">🐟</span>
+        </div>
+
+        <div class="shore"></div>
+        <div id="avatars" class="avatars">
+          <div class="empty-pond">
+            ผู้ชมเข้ามาในไลฟ์แล้วจะมานั่งตกปลาที่นี่ 🪑
+          </div>
+        </div>
+        <div class="water-label">KEJI FISHING POND</div>
+      </div>
+
+      <div class="pond-foot">
+        <span>❤️ 60 ไลก์สะสม = 🪱 หนอน 1 ชิ้น</span>
+        <span>🎁 ของขวัญ = เหยื่อตามระดับ</span>
+      </div>
+    </section>
+
+    <section class="below">
+      <div class="panel">
+        <div class="panel-title">
+          <h2>🪑 นักตกปลาในบ่อ</h2>
+          <span class="hint">เลือกเหยื่อเพื่อทดลองตกปลา</span>
+        </div>
+        <div id="players" class="player-list">
+          <p class="muted">ยังไม่มีผู้เล่น — รอผู้ชมเข้ามาในไลฟ์</p>
+        </div>
+      </div>
+
+      <div class="panel rankings">
+        <div class="panel-title">
+          <h2>🏆 อันดับ 1–8</h2>
+          <span class="hint">อัปเดตอัตโนมัติ</span>
+        </div>
+        <div class="tabs">
+          <button class="tab active" data-tab="likes">❤️ ไลก์</button>
+          <button class="tab" data-tab="species">🐟 ชนิดปลา</button>
+          <button class="tab" data-tab="weight">⚖️ น้ำหนัก</button>
+        </div>
+        <ol id="rank-list"></ol>
+      </div>
+    </section>
+
+    <section class="panel activity">
+      <div class="panel-title">
+        <h2>✨ เหตุการณ์ในบ่อ</h2>
+        <button id="reset" class="reset">เริ่มรอบใหม่</button>
+      </div>
+      <div id="feed" class="feed">รอเหตุการณ์จากไลฟ์…</div>
+    </section>
+
+    <section class="panel connect">
+      <h2>🔌 เชื่อมกับ TikTok LIVE</h2>
+      <p>
+        เวอร์ชันนี้เป็นเกมเว็บที่เล่นและทดสอบได้
+        พร้อมช่องรับเหตุการณ์จากตัวเชื่อมภายนอก
+        ยังไม่สามารถดึงไลก์หรือของขวัญจาก TikTok เอง
+        จนกว่าจะตั้งค่าตัวเชื่อม LIVE และโฮสต์เกมออนไลน์
+      </p>
+      <details>
+        <summary>ทดสอบเกมโดยไม่ต้องเชื่อม TikTok</summary>
+        <button id="demo" class="demo">เพิ่มผู้เล่นทดลอง</button>
+      </details>
+    </section>
+
+    <footer>
+      ตกปลามหาสนุก by Keji · Prototype สำหรับทดสอบระบบเกม
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
